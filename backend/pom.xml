@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2018 Red Hat, Inc. and/or its affiliates.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.optaweb.vehiclerouting</groupId>
+    <artifactId>optaweb-vehicle-routing</artifactId>
+    <version>7.36.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>optaweb-vehicle-routing-backend</artifactId>
+  <packaging>jar</packaging>
+
+  <name>OptaWeb Vehicle Routing Backend</name>
+
+  <properties>
+    <!--
+      Do not fail on Checkstyle errors when building locally to interrupt development as little as possible.
+      To enforce code style, build will fail on Checkstyle errors when running in CI environment (see profile below).
+    -->
+    <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- Production dependencies -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.graphhopper</groupId>
+      <artifactId>graphhopper-reader-osm</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.neovisionaries</groupId>
+      <artifactId>nv-i18n</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-yaml</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+    <!--
+      Add JAXB API dependency that's been deprecated in Java 9 and dropped in Java 11. See
+      https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j
+    -->
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- Testing dependencies -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <!-- Needed because kie-parent depends on hamcrest-core. -->
+        <exclusion>
+          <groupId>org.hamcrest</groupId>
+          <artifactId>hamcrest</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+    </dependency>
+    <!-- Enable Spring Boot Automatic Restart, see Development Guide in Readme to learn how to use it. -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!-- Include annotation processor that generates metadata for @ConfigurationProperties -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <compilerArgs>
+            <!--
+              Visit https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html
+              to learn more about javac warnings
+             -->
+            <arg>-Xlint:all</arg>
+            <arg>-Xlint:-processing</arg>
+            <arg>-Xlint:-serial</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <!--
+            Required due to the "repackage" goal of spring-boot-maven-plugin, as the maven-failsafe-plugin cannot
+            find classes in the fat jar. For more details see:
+            https://sandor-nemeth.github.io/2017/10/16/integration-tests-with-spring-boot-classnotfoundexception.html
+          -->
+          <additionalClasspathElements>
+            <additionalClasspathElement>${project.build.outputDirectory}</additionalClasspathElement>
+          </additionalClasspathElements>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <show>package</show>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>validate</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration combine.self="override">
+              <configLocation>config/checkstyle/Checker.xml</configLocation>
+              <failOnViolation>${checkstyle.failOnViolation}</failOnViolation>
+              <logViolationsToConsole>true</logViolationsToConsole>
+              <includeTestSourceDirectory>true</includeTestSourceDirectory>
+              <includeResources>true</includeResources>
+              <includeTestResources>true</includeTestResources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <profiles>
+            <profile>local</profile>
+          </profiles>
+        </configuration>
+        <executions>
+          <execution>
+            <id>repackage-fat-jar</id>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+            <configuration>
+              <classifier>exec</classifier>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>mutationCoverage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <version>1.4.3</version>
+            <dependencies>
+              <dependency>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-junit5-plugin</artifactId>
+                <version>0.8</version>
+              </dependency>
+            </dependencies>
+            <!--
+              kie-parent contains Pitest configuration that doesn't work well for this project and it's not possible
+              to change it without a complete override (combine.self="override"), for example excludedClasses,
+              timeoutConstant.
+            -->
+            <configuration combine.self="override">
+              <reportsDirectory>local/pit-reports</reportsDirectory>
+              <timestampedReports>true</timestampedReports>
+              <!--
+                Experimental. Using more than 2 threads doesn't reduce execution time further
+                and leads to minion timeouts.
+              -->
+              <threads>2</threads>
+              <mutators>
+                <!-- See http://pitest.org/quickstart/mutators/ -->
+                <mutator>DEFAULTS</mutator>
+                <mutator>NON_VOID_METHOD_CALLS</mutator>
+                <mutator>REMOVE_CONDITIONALS</mutator>
+              </mutators>
+              <avoidCallsTo>
+                <!--
+                  String concatenation ("a" + "b") is implemented using StringBuilder.append() in bytecode.
+                  We're not interested in mutations of these calls - it's mostly toString() and exception messages.
+                  Reducing number of mutations also improves execution time.
+                -->
+                <avoidCallsTo>java.lang.StringBuilder</avoidCallsTo>
+                <avoidCallsTo>org.slf4j</avoidCallsTo>
+                <avoidCallsTo>org.springframework.boot.SpringApplication</avoidCallsTo>
+              </avoidCallsTo>
+              <excludedClasses>
+                <excludedClass>*Config</excludedClass>
+                <excludedClass>*Properties</excludedClass>
+              </excludedClasses>
+              <excludedMethods>hashCode</excludedMethods>
+              <excludedTestClasses>
+                <param>*IntegrationTest</param>
+              </excludedTestClasses>
+            </configuration>
+            <executions>
+              <execution>
+                <id>default-pitest</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>mutationCoverage</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Fail the build if there are Checkstyle errors only when running in CI environment. -->
+    <profile>
+      <id>checkstyleCI</id>
+      <activation>
+        <property>
+          <name>env.CI</name>
+        </property>
+      </activation>
+      <properties>
+        <checkstyle.failOnViolation>true</checkstyle.failOnViolation>
+      </properties>
+    </profile>
+
+    <!--
+      To move the coverage measurement from Travis to Jenkins, add the repository name to
+      SONARCLOUD_ENABLED_REPOSITORIES in
+      https://github.com/kiegroup/kie-jenkins-scripts/blob/master/job-dsls/jobs/pr_jobs.groovy
+    -->
+    <profile>
+      <id>run-code-coverage</id> <!-- Do not change. This exact ID is used in Jenkins jobs. -->
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>cypress</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+              <profiles>
+                <profile>dev-cypress</profile>
+              </profiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

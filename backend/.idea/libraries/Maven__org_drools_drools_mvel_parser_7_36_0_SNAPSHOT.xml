@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.drools:drools-mvel-parser:7.36.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-mvel-parser/7.36.0-SNAPSHOT/drools-mvel-parser-7.36.0-20200414.081332-48.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-mvel-parser/7.36.0-SNAPSHOT/drools-mvel-parser-7.36.0-20200414.081332-48-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-mvel-parser/7.36.0-SNAPSHOT/drools-mvel-parser-7.36.0-20200414.081332-48-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

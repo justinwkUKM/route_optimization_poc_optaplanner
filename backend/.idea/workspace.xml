@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd66b569-7663-42c6-aa7b-9168e8efa7bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/config/checkstyle/Checker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/OptaWebVehicleRoutingApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/Profiles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/CountryCodeValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/LocationData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/RouteWithTrack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/RoutingPlan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/RoutingProblem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/VehicleFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/domain/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceCrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/LocationCrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/LocationEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/LocationRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/persistence/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/DistanceMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/RouteOptimizerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/RouteOptimizerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/SolutionPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/SolverManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/AddVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/AddVisit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/ChangeVehicleCapacity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveVisit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/change/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/AbstractPlanningObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningDepot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningLocationFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVehicleFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVisit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVisitFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/SolutionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/Standstill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/domain/VehicleRoutingSolution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/planner/weight/DepotAngleVisitDifficultyWeightFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/AirDistanceRouter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/GraphHopperRouter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/RoutingConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/RoutingEngineException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/RoutingProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/routing/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/DataSetDownloadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableCoordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableRoute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableRoutingPlan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableRoutingPlanFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/PortableVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/RoutingProblemInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/ServerInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketEventLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketRoutingPlanPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/plugin/websocket/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/DemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/RoutingProblemConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/RoutingProblemList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSetLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSetMarshaller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/demo/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/distance/DistanceCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/distance/DistanceMatrixImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/distance/DistanceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/distance/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/location/DistanceMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/location/LocationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/location/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/location/RouteOptimizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/location/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/region/BoundingBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/region/Region.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/region/RegionProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/region/RegionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/region/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/reload/ReloadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/RouteChangedEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/RouteListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/RoutePublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/Router.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/ShallowRoute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/route/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/vehicle/VehicleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/vehicle/VehicleRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/java/org/optaweb/vehiclerouting/service/vehicle/VehicleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/application-dev-cypress.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/application-production.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/org/optaweb/vehiclerouting/service/demo/belgium-cities.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/org/optaweb/vehiclerouting/solver/vehicleRoutingScoreRules.drl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/main/resources/org/optaweb/vehiclerouting/solver/vehicleRoutingSolverConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/TestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/CoordinatesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/CountryCodeValidatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/LocationDataTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/LocationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/RouteTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/RouteWithTrackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/RoutingPlanTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/VehicleFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/domain/VehicleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceEntityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/DistanceRepositoryIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/LocationEntityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/LocationRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/persistence/LocationRepositoryIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/DistanceMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/RouteOptimizerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/SolutionPublisherTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/SolverExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/SolverIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/SolverManagerIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/SolverManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/AddVehicleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/AddVisitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/ChangeVehicleCapacityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveLocationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveVehicleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/change/RemoveVisitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningLocationFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningLocationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVehicleFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVehicleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/PlanningVisitFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/SolutionFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/domain/VehicleRoutingSolutionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/planner/weight/DepotAngleVisitDifficultyWeightFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/routing/AirDistanceRouterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/routing/GraphHopperIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/routing/GraphHopperRouterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/routing/RoutingConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/DataSetDownloadControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/PortableCoordinatesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/PortableLocationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/PortableRouteTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/PortableRoutingPlanFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/PortableVehicleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/plugin/websocket/WebSocketRoutingPlanPublisherTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/demo/DemoServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/demo/RoutingProblemListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSetMarshallerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/distance/DistanceMatrixImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/location/LocationServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/region/BoundingBoxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/region/RegionServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/reload/ReloadServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/route/RouteListenerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/route/ShallowRouteTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/java/org/optaweb/vehiclerouting/service/vehicle/VehicleServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/mockito-extensions/README.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/plugin/routing/CREDITS.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/plugin/routing/planet_12.032,53.0171_12.1024,53.0491.osm.pbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/plugin/websocket/portable-location.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/plugin/websocket/portable-route.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/service/demo/dataset/test-belgium.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/solver/vehicleRoutingScoreRules.drl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-backend/src/test/resources/org/optaweb/vehiclerouting/solver/vehicleRoutingSolverConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/docker/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/docker/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/assets/images/optaPlannerLogo200px.png" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/assets/images/optaPlannerLogo200px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/if_big_house-home_2222740.png" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/if_big_house-home_2222740.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/components/LocationList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/components/LocationList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/components/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/components/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/header/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/header/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Demo.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Demo.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Demo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Demo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../optaweb-vehicle-routing-frontend/src/ui/pages/Route.tsx" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="267930287">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Dockerfile" value="1" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="13" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="492436929">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Dockerfile" value="2" />
+          <entry key="adoc" value="1" />
+          <entry key="java" value="22" />
+          <entry key="properties" value="4" />
+          <entry key="xml" value="1" />
+          <entry key="yaml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Dockerfile" value="1" />
+          <entry key="JAVA" value="22" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="4" />
+          <entry key="XML" value="1" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Dockerfile" value="237" />
+          <entry key="java" value="40" />
+          <entry key="properties" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Dockerfile" value="72" />
+          <entry key="JAVA" value="40" />
+          <entry key="PLAIN_TEXT" value="165" />
+          <entry key="Properties" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/RouteWithTrack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev-cypress.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-production.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-test.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.adoc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1965">
+              <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#729#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#718#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>air</find>
+      <find>&quot;Vehicle</find>
+      <find>&quot;TLOVehicle</find>
+      <find>&quot;Location</find>
+      <find>&quot;TLOLocation</find>
+      <find>8080</find>
+      <find>Port</find>
+      <find>port</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/vehicle/VehicleService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="822" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="graphhopper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="openstreetmap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="optaweb-vehicle-routing-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tloweb-vehicle-routing-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589559029004" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="OptaWebVehicleRoutingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="optaweb-vehicle-routing-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.optaweb.vehiclerouting.OptaWebVehicleRoutingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd66b569-7663-42c6-aa7b-9168e8efa7bb" name="Default Changelist" comment="" />
+      <created>1587607480981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587607480981</updated>
+      <workItem from="1587607485281" duration="1694000" />
+      <workItem from="1587615653817" duration="1456000" />
+      <workItem from="1587878254851" duration="9998000" />
+      <workItem from="1587907588132" duration="3583000" />
+      <workItem from="1587963030779" duration="387000" />
+      <workItem from="1587983746491" duration="9300000" />
+      <workItem from="1588522631489" duration="715000" />
+      <workItem from="1588691322656" duration="12000" />
+      <workItem from="1589208424667" duration="1985000" />
+      <workItem from="1589275635976" duration="332000" />
+      <workItem from="1589543268983" duration="1520000" />
+      <workItem from="1589600462348" duration="1647000" />
+      <workItem from="1589856415790" duration="6431000" />
+      <workItem from="1590045568257" duration="275000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39335000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="822" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24892704" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30958903" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///var/folders/vl/bfmpbdvn2cq0kmlrgqqyd79m0000gn/T/kite_tutorial.py" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/LocationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaweb-vehicle-routing-backend.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/Coordinates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/CountryCodeValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/plugin/routing/GraphHopperRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/RoutingPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/RoutingProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/VehicleFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSetLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSetMarshaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/DemoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/RoutingProblemConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/optaweb/vehiclerouting/service/demo/dataset/test-belgium.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/plugin/planner/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/distance/DistanceCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/distance/DistanceMatrixImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/vehicle/VehicleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/location/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/OptaWebVehicleRoutingApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/domain/RouteWithTrack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev-cypress.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-production.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-test.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.adoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/dataset/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/optaweb/vehiclerouting/service/demo/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
