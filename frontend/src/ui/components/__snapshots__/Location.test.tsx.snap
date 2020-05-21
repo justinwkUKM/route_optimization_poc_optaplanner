@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location Component should render correctly 1`] = `
+<DataListItem
+  aria-labelledby="location-10"
+  className=""
+  isExpanded={false}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <DataListItemRow
+    className=""
+  >
+    <DataListCell
+      alignRight={false}
+      className=""
+      isFilled={true}
+      isIcon={false}
+      width={1}
+    >
+      <Tooltip
+        appendTo={[Function]}
+        className={null}
+        content="x"
+        enableFlip={true}
+        entryDelay={500}
+        exitDelay={500}
+        maxWidth="18.75rem"
+        position="top"
+        trigger="mouseenter focus"
+        zIndex={9999}
+      >
+        <span
+          id="location-10"
+        >
+          x
+        </span>
+      </Tooltip>
+    </DataListCell>
+    <DataListCell
+      alignRight={false}
+      className=""
+      isFilled={false}
+      isIcon={false}
+      width={1}
+    >
+      <Button
+        isDisabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="link"
+      >
+        <TimesIcon
+          color="currentColor"
+          size="sm"
+          title={null}
+        />
+      </Button>
+    </DataListCell>
+  </DataListItemRow>
+</DataListItem>
+`;
+
+exports[`Location Component should render correctly when description is missing 1`] = `
+<DataListItem
+  aria-labelledby="location-11"
+  className=""
+  isExpanded={false}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <DataListItemRow
+    className=""
+  >
+    <DataListCell
+      alignRight={false}
+      className=""
+      isFilled={true}
+      isIcon={false}
+      width={1}
+    >
+      <span
+        id="location-11"
+      >
+        Location 11
+      </span>
+    </DataListCell>
+    <DataListCell
+      alignRight={false}
+      className=""
+      isFilled={false}
+      isIcon={false}
+      width={1}
+    >
+      <Button
+        isDisabled={false}
+        onClick={[Function]}
+        type="button"
+        variant="link"
+      >
+        <TimesIcon
+          color="currentColor"
+          size="sm"
+          title={null}
+        />
+      </Button>
+    </DataListCell>
+  </DataListItemRow>
+</DataListItem>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Connection Error Component should render correctly 1`] = `
+<Modal
+  actions={Array []}
+  ariaDescribedById=""
+  className=""
+  hideTitle={false}
+  isLarge={false}
+  isOpen={true}
+  isSmall={true}
+  onClose={[Function]}
+  title="title"
+>
+  <TextContent>
+    <Text
+      component="h3"
+    >
+      <i>
+        Icon
+      </i>
+      message
+      <Text
+        component="small"
+      >
+        help
+      </Text>
+    </Text>
+  </TextContent>
+</Modal>
+`;

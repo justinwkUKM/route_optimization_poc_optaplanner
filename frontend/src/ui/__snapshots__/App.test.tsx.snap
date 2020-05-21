@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly 1`] = `
+<Fragment>
+  <Connect(ConnectionManager) />
+  <Page
+    breadcrumb={null}
+    className=""
+    header={<Header />}
+    isManagedSidebar={false}
+    onPageResize={null}
+    sidebar={null}
+    skipToContent={null}
+  >
+    <Background />
+    <PageSection
+      className=""
+      noPadding={false}
+      noPaddingMobile={false}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "100%",
+          "overflowY": "auto",
+        }
+      }
+      variant="default"
+    >
+      <Switch>
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(Vehicles)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/vehicles"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(Visits)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/visits"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(Route)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/route"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(Demo)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/demo"
+        />
+      </Switch>
+    </PageSection>
+  </Page>
+</Fragment>
+`;
